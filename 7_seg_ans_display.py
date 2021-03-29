@@ -1,98 +1,15 @@
-'''pyfirmata is module to control arduino:- uno,nano,mega,etc, 
-this is a simple blink tst pin 13 is where the onboard led is connected to'''
-# import pyfirmata as pf
-# import time as t 
-# pin = 13
-# port = "COM5"
-# board = pf.Arduino(port)
-# for i in range(10):
-#     board.digital[pin].write(1)
-#     print("on")
-#     t.sleep(1)
-#     board.digital[pin].write(0)
-#     print("off")
-#     t.sleep(1)
+import pyfirmata as pf
+from tkinter import *
 
-'''takes a input for for file name and blinks led onboard for the same 
-and then takes info for the file and the after printing ot to the file 
-blinks the led thrice for the same'''
-# import pyfirmata as pyf
-# import time as t
-# import sys
-# pin = 13
-# board = pyf.Arduino("COM5")
-# f_nm = input("Enter file name (with extension): ")
-# board.digital[pin].write(1)
-# t.sleep(0.2)
-# board.digital[pin].write(0)
-# t.sleep(0.2)
-# print("Enter txt to store in the file:- \n\t\t")
-# f = open(f_nm,"r+")
-# info = sys.stdin.read()
-# prt = f.write(info)
-# for i in range(3):
-#     board.digital[pin].write(1)
-#     t.sleep(0.2)
-#     board.digital[pin].write(0)
-#     t.sleep(0.2)
-# f.close()
+a = 3
+b = 2
+c = 8
+d = 7
+e = 6
+f = 4
+g = 5
 
-'''controls a external led'''
-# import pyfirmata as pf
-# import time as t
-# board = pf.Arduino("COM5")
-# for i in range(20):
-#     board.digital[6].write(1)
-#     print("on")
-#     t.sleep(0.1)
-#     board.digital[6].write(0)
-#     print("off")
-#     t.sleep(0.1)
-
-'''controlling led through buttons using tkinter'''
-# import pyfirmata as pf
-# from tkinter import *
-# board = pf.Arduino("COM5")
-# def on():
-#     board.digital[13].write(1)
-#     print("On")
-# def off():
-#     board.digital[13].write(0)
-#     print("Off")
-# win = Tk()
-# win.title("Led controller")
-# b_1 = Button(win,text = "On", command=on, width=20)
-# b_1.grid(row = 0, column = 0, padx=50)
-# b_2 = Button(win,text = "Off", command=off, width=20)
-# b_2.grid(row = 1, column = 0, padx=50)
-# win.mainloop()
-
-'''working with 7 segment displaying numbers/characters, this code displays the number 7'''
-# import pyfirmata as pf
-# a = 3
-# b = 2
-# c = 8
-# d = 7
-# e = 6
-# f = 4
-# g = 5
-# seg_7 = pf.Arduino("COM5")
-# seg_7.digital[a].write(1)
-# seg_7.digital[b].write(1)
-# seg_7.digital[c].write(1)
-
-'''Displays numbers on 7 seg on pressing the buttons'''
-# import pyfirmata as pf
-# from tkinter import *
-
-# a = 3
-# b = 2
-# c = 8
-# d = 7
-# e = 6
-# f = 4
-# g = 5
-# seg_7 = pf.Arduino("COM5")
+seg_7 = pf.Arduino("COM5")
 
 # def zero():
 #     seg_7.digital[a].write(1)
@@ -219,43 +136,3 @@ blinks the led thrice for the same'''
 
 # win.mainloop()
 
-
-
-
-
-
-#---------------------------------------------------------------------------------------------------------------------
-
-
-
-from pyfirmata import Arduino
-from pyfirmata import INPUT, OUTPUT, PWM
-from tkinter import *
- 
-# Setting up Arduino board
-port = 'COM5'
-board = Arduino(port)
-
-# Assigning modes to digital pins
-board.digital[13].mode = OUTPUT
-board.analog[1].mode = OUTPUT
-# ledPin = board.get_pin('a:0:o')
-board.analog[1].write(1)
-
-# def on():
-#     board.analog[1].write(1)
-#     # ledPin.write(1)
-#     # board.digital[13].write(1)
-#     print("On")
-# def off():
-#     board.analog[1].write(0)
-#     # ledPin.write(0)
-#     # board.digital[13].write(0)
-#     print("Off")
-# win = Tk()
-# win.title("Led controller")
-# b_1 = Button(win,text = "On", command=on, width=20)
-# b_1.grid(row = 0, column = 0, padx=50)
-# b_2 = Button(win,text = "Off", command=off, width=20)
-# b_2.grid(row = 1, column = 0, padx=50)
-# win.mainloop()
