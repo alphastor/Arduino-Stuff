@@ -135,56 +135,62 @@ def nine():
      ser.write(b'G')
 
 def snake():
-    for i in range(3):
+     for i in range(5):
         ser.write(b'A')
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'a')
         ser.write(b'H')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'h')
         ser.write(b'I')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'i')
         ser.write(b'N')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'n')
         ser.write(b'G')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'g')
         ser.write(b'E')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'e')
         ser.write(b'D')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'd')
         ser.write(b'K')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'k')
         ser.write(b'J')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'j')
         ser.write(b'N')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'n')
         ser.write(b'G')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'g')
         ser.write(b'F')
 
-        t.sleep(0.2)
+        t.sleep(0.1)
         ser.write(b'f')
 
+def display():
+     if user_val.get() == "2":
+          two()
+
+
 #--------------------------------------------------------------------#
+
 # creating tkinter window 
 win = Tk()
 win.title("7 Segment controller")
@@ -201,6 +207,11 @@ b_2.grid(row = 1, column = 1)
 b_3 = Button(win,text = "3", width=10, command = three)
 b_3.grid(row = 1, column = 2)
 
+b_p = Button(win, text = "+", width = 10)
+b_p.grid(row = 1, column =  3)
+
+#---------------------------------------------------------------------------------#
+
 b_4 = Button(win,text = "4", width=10, command = four)
 b_4.grid(row = 2, column = 0)
 
@@ -209,6 +220,11 @@ b_5.grid(row = 2, column = 1)
 
 b_6 = Button(win,text = "6", width=10, command = six)
 b_6.grid(row = 2, column = 2)
+
+b_p = Button(win, text = "-", width = 10)
+b_p.grid(row = 2, column =  3)
+
+#---------------------------------------------------------------------------------#
 
 b_7 = Button(win,text = "7", width=10, command = seven)
 b_7.grid(row = 3, column = 0)
@@ -219,11 +235,35 @@ b_8.grid(row = 3, column = 1)
 b_9 = Button(win,text = "9", width=10, command = nine)
 b_9.grid(row = 3, column = 2)
 
+b_p = Button(win, text = "*", width = 10)
+b_p.grid(row = 3, column =  3)
+
+#---------------------------------------------------------------------------------#
+
 b_0 = Button(win,text = "0", width=10, command = zero)
-b_0.grid(row = 4, columnspan = 4, sticky = "ew")
+b_0.grid(row = 4, columnspan = 3, sticky = "ew")
+
+b_p = Button(win, text = "/", width = 10)
+b_p.grid(row = 4, column =  3)
+
+#---------------------------------------------------------------------------------#
 
 b_snake = Button(win,text = "Snake", width=10, command = snake)
-b_snake.grid(row = 5, columnspan = 4, sticky = "ew")
+b_snake.grid(row = 5, columnspan = 3, sticky = "ew")
+
+# if input ==2 prints 2 on 7 seg display
+b_display = Button(win, text = "Display", width=10, command = display)
+b_display.grid(row = 5, column = 3)
+
+#---------------------------------------------------------------------------------#
+
+user_val = StringVar()
+usr_input = Entry(win, textvariable=user_val) 
+usr_input.grid(row = 6, columnspan=4, sticky="ew")
+
+
+
+#---------------------------------------------------------------------------------#
 
 win.mainloop()
 
