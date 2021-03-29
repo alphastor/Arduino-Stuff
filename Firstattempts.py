@@ -228,19 +228,19 @@ blinks the led thrice for the same'''
 
 
 
-from pyfirmata import Arduino
-from pyfirmata import INPUT, OUTPUT, PWM
-from tkinter import *
+# from pyfirmata import Arduino
+# from pyfirmata import INPUT, OUTPUT, PWM
+# from tkinter import *
  
-# Setting up Arduino board
-port = 'COM5'
-board = Arduino(port)
+# # Setting up Arduino board
+# port = 'COM5'
+# board = Arduino(port)
 
-# Assigning modes to digital pins
-board.digital[13].mode = OUTPUT
-board.analog[1].mode = OUTPUT
-# ledPin = board.get_pin('a:0:o')
-board.analog[1].write(1)
+# # Assigning modes to digital pins
+# board.digital[13].mode = OUTPUT
+# board.analog[1].mode = OUTPUT
+# ledPin = board.get_pin('a:1:o')
+# ledPin.write(1)
 
 # def on():
 #     board.analog[1].write(1)
@@ -259,3 +259,45 @@ board.analog[1].write(1)
 # b_2 = Button(win,text = "Off", command=off, width=20)
 # b_2.grid(row = 1, column = 0, padx=50)
 # win.mainloop()
+
+'''communicating to arduino with a different method'''
+# import serial
+# import time
+# serialcomm = serial.Serial('COM5', 9600)
+# # serialcomm.timeout = 1
+# while True:
+#     i = input("Enter Input: ")
+#     if i == "Done":
+#         print('finished')
+#         break
+#     serialcomm.write(i.encode())
+#     # time.sleep(0.5)
+#     # print(serialcomm.readline().decode('ascii'))
+# serialcomm.close()
+
+'''communicating to arduino witha different method'''
+# import serial
+# from tkinter import *
+# import tkinter as tk 
+
+# commPort = 'COM5'
+# ser = serial.Serial(commPort, baudrate = 9600, timeout = 1)
+
+# def turnOnLED():
+#     ser.write(b'o')
+
+# def turnOffLED(): 
+#     ser.write(b'x')
+
+# # creating tkinter window 
+# root = Tk() 
+# root.title('Blink GUI')
+
+# btn_On= tk.Button(root, text="Turn On", command=turnOnLED)
+# btn_On.grid(row=0, column=0)
+
+# btn_Off = tk.Button(root, text="Turn Off", command=turnOffLED)
+# btn_Off.grid(row=0, column=1)
+
+# root.geometry("350x350")
+# root.mainloop()
