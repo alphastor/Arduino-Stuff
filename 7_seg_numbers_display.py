@@ -193,7 +193,7 @@ def display():
 
 # creating tkinter window 
 win = Tk()
-win.title("7 Segment controller")
+win.title("7 Segment Number Displayer")
 
 b_c = Button(win,text = "clear", width=10, command = clear)
 b_c.grid(row = 0, columnspan = 4, sticky = "ew")
@@ -259,7 +259,7 @@ b_display.grid(row = 5, column = 3)
 
 user_val = StringVar()
 usr_input = Entry(win, textvariable=user_val) 
-usr_input.grid(row = 6, columnspan=4, sticky="ew")
+usr_input.grid(row = 6, columnspan=4, sticky="ew") # columnspan defines no of columns to be covered in a row and sticky defines to expand in ew or east and west dir, we can also expand in ns or north and south dir or we can define all ir, nsew
 
 
 
