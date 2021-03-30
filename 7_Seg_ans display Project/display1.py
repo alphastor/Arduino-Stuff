@@ -3,6 +3,23 @@ import serial
 ser  = serial.Serial("COM6", baudrate = 9600, timeout = 1)
 
 def clear_display():
+     ser.write(b'A')
+     ser.write(b'B')
+     ser.write(b'C')
+     ser.write(b'D')
+     ser.write(b'E')
+     ser.write(b'F')
+     ser.write(b'g')
+
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'L')
+     ser.write(b'M')
+     ser.write(b'n')
+
+def off():
      ser.write(b'a')
      ser.write(b'b')
      ser.write(b'c')
