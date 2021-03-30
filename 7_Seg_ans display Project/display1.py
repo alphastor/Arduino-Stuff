@@ -1,6 +1,6 @@
 import serial
 
-ser = serial.Serial("COM5", baudrate=9600, timeout = 1)
+ser  = serial.Serial("COM5", baudrate = 9600, timeout = 1)
 
 def clear():
      ser.write(b'a')
