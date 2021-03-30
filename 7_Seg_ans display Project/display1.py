@@ -2,7 +2,7 @@ import serial
 
 ser  = serial.Serial("COM6", baudrate = 9600, timeout = 1)
 
-def clear():
+def clear_display():
      ser.write(b'a')
      ser.write(b'b')
      ser.write(b'c')
@@ -18,6 +18,15 @@ def clear():
      ser.write(b'l')
      ser.write(b'm')
      ser.write(b'n')   
+
+def minus():
+     ser.write(b'a')
+     ser.write(b'b')
+     ser.write(b'c')
+     ser.write(b'd')
+     ser.write(b'e')
+     ser.write(b'f')
+     ser.write(b'G') 
 
 def zero():
      ser.write(b'A')
