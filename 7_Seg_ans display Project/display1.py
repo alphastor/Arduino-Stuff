@@ -1,6 +1,6 @@
 import serial
 
-ser  = serial.Serial("COM5", baudrate = 9600, timeout = 1)
+ser  = serial.Serial("COM6", baudrate = 9600, timeout = 1)
 
 def clear():
      ser.write(b'a')
@@ -108,3 +108,95 @@ def nine():
      ser.write(b'e')
      ser.write(b'F')
      ser.write(b'G')
+
+#-------------------------------------------------------------------------------------------#
+
+def zero_2():
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'L')
+     ser.write(b'M')
+     ser.write(b'n')
+
+def one_2():
+     ser.write(b'h')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'k')
+     ser.write(b'l')
+     ser.write(b'm')
+     ser.write(b'n')
+
+def two_2():
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'j')
+     ser.write(b'K')
+     ser.write(b'L')
+     ser.write(b'm')
+     ser.write(b'N')
+
+def three_2():
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'l')
+     ser.write(b'm')
+     ser.write(b'N')
+
+def four_2():
+     ser.write(b'h')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'k')
+     ser.write(b'l')
+     ser.write(b'M')
+     ser.write(b'N')
+
+def five_2():
+     ser.write(b'H')
+     ser.write(b'i')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'l')
+     ser.write(b'M')
+     ser.write(b'N')
+
+def six_2():
+     ser.write(b'H')
+     ser.write(b'i')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'L')
+     ser.write(b'M')
+     ser.write(b'N')
+
+def seven_2():
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'k')
+     ser.write(b'l')
+     ser.write(b'm')
+     ser.write(b'n')
+     
+def eight_2():
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'L')
+     ser.write(b'M')
+     ser.write(b'N')
+
+def nine_2():
+     ser.write(b'H')
+     ser.write(b'I')
+     ser.write(b'J')
+     ser.write(b'K')
+     ser.write(b'l')
+     ser.write(b'M')
+     ser.write(b'N')
