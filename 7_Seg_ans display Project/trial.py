@@ -50,20 +50,20 @@ def operator_btns(): # --adding operators to the window-- #
     btn_delete = Button(win, width=6, text='⌫', bd=0, height=2,bg='#D3D3D3')
     btn_delete.place(x=134, y=70)
 
-    btn_div = Button(win, width=6, text='÷', bd=0, height=2,bg='#D3D3D3')
-    btn_div.place(x=186, y=70)
-
-    btn_mul = Button(win, width=6, text='×', bd=0, height=2,bg='#D3D3D3')
-    btn_mul.place(x=186, y=110)
-
-    btn_add = Button(win, width=6, text='+', bd=0, height=2,bg='#D3D3D3')
-    btn_add.place(x=186, y=150)
-
-    btn_subt = Button(win, width=6, text='-', bd=0, height=2,bg='#D3D3D3')
-    btn_subt.place(x=186, y=190)
-
     btn_decimal = Button(win, width=6, text='.', bd=0, height=2,bg='#D3D3D3')
     btn_decimal.place(x=186, y=230)
+
+    operator = []
+    for i in range(4):
+        operator.append(Button(win, width=6, bd=0, height=2, bg='#D3D3D3'))
+
+    operator[0]['text'] = '+'
+    operator[1]['text'] = '-'
+    operator[2]['text'] = '×'
+    operator[3]['text'] = '÷'
+
+    for i in range(4):
+        operator[i].place(x=186, y=70+i*40)
 
 number_btns()
 operator_btns()

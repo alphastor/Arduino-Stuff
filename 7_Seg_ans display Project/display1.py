@@ -9,7 +9,7 @@ def clear_display():
      ser.write(b'd')
      ser.write(b'e')
      ser.write(b'f')
-     ser.write(b'g') 
+     ser.write(b'g')
 
      ser.write(b'h')
      ser.write(b'i')
@@ -17,8 +17,9 @@ def clear_display():
      ser.write(b'k')
      ser.write(b'l')
      ser.write(b'm')
-     ser.write(b'n')   
+     ser.write(b'n')
 
+#-----------------------------------display 1-----------------------------------#
 def minus():
      ser.write(b'a')
      ser.write(b'b')
@@ -26,7 +27,7 @@ def minus():
      ser.write(b'd')
      ser.write(b'e')
      ser.write(b'f')
-     ser.write(b'G') 
+     ser.write(b'G')
 
 def zero():
      ser.write(b'A')
@@ -99,7 +100,7 @@ def seven():
      ser.write(b'e')
      ser.write(b'f')
      ser.write(b'g')
-     
+
 def eight():
      ser.write(b'A')
      ser.write(b'B')
@@ -118,7 +119,7 @@ def nine():
      ser.write(b'F')
      ser.write(b'G')
 
-#-------------------------------------------------------------------------------------------#
+#-----------------------------------display 2-----------------------------------#
 
 def zero_2():
      ser.write(b'H')
@@ -191,7 +192,7 @@ def seven_2():
      ser.write(b'l')
      ser.write(b'm')
      ser.write(b'n')
-     
+
 def eight_2():
      ser.write(b'H')
      ser.write(b'I')
