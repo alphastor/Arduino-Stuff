@@ -1,5 +1,6 @@
 import serial
 
+#baudrate should match the number written in arduino ide
 ser  = serial.Serial("COM6", baudrate = 9600, timeout = 1)
 
 def clear_display():
