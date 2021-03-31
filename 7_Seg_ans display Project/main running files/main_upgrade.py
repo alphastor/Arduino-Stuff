@@ -76,8 +76,8 @@ def opr(x): # --display pressed operator button-- #
 def cal_n_display_result():
     usr_input = screen.get()
     result = eval(usr_input)
-    # screen.delete(0, 'end')
-    # screen.insert(0, result)
+    # screen.delete(0, 'end') # --delete any value present in input box -- #
+    # screen.insert(0, result) # --display result in input box-- #
 
     a = str(result)
     b = a[0]
