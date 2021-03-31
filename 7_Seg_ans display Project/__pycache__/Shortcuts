@@ -1,5 +1,0 @@
-ctrl+D: cursor on desired word and ctrl + D to select multiple occurances of those words.
-ctrl+L: select line.
-ctrl+/: comment or uncomment a line.
-ctrl+arrow: move word by word.
-ctrl+shift+arrow: move and select word by word.
