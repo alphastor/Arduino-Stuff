@@ -78,7 +78,9 @@ def cal_n_display_result():
     result = eval(usr_input)
     # screen.delete(0, 'end') # --delete any value present in input box -- #
     # screen.insert(0, result) # --display result in input box-- #
-
+    if len(str(result))>2:
+        screen.delete(0, 'end')
+        screen.insert(0, 'only 2 char result display')
     a = str(result)
     b = a[0]
 
@@ -103,7 +105,7 @@ win.geometry("265x280+1230+100") # --widthxheight+posx+posy posx&y is where on t
 win.maxsize(265, 280) # --max window resize-- #
 win.minsize(265, 280) # --min window resize-- #
 
-lbl = Label(win, text="-------✗Standard✗-------", font='AnaEve')  # --display a text in window-- #
+lbl = Label(win, text="------------✗Standard✗-----------", font='AnaEve')  # --display a text in window-- #
 lbl.place(x=8, y=5)
 
 screen = Entry(win, width=22, bd=0, font='10', bg='#D3D3D3', justify=RIGHT) # --initialise screen to display ans-- #
