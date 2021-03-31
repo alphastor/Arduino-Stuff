@@ -106,7 +106,7 @@ win.minsize(265, 280) # --min window resize-- #
 lbl = Label(win, text="-------✗Standard✗-------", font='AnaEve')  # --display a text in window-- #
 lbl.place(x=8, y=5)
 
-screen = Entry(win, width=18, bd=0, font='10', bg='#D3D3D3', justify=RIGHT) # --initialise screen to display ans-- #
+screen = Entry(win, width=22, bd=0, font='10', bg='#D3D3D3', justify=RIGHT) # --initialise screen to display ans-- #
 screen.insert(0, '0')
 screen.place(x=30, y=40)  # --positioning the screen-- #
 
