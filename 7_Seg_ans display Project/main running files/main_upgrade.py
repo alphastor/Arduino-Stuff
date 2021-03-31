@@ -68,7 +68,7 @@ def delete():
     if length == 1:
         screen.insert(0,'0')
 
-def opr(x):
+def opr(x): # --display pressed operator button-- #
     if screen.get() != '0':
         length = len(screen.get())
         screen.insert(length, operator[x]['text'])
