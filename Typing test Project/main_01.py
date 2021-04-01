@@ -4,8 +4,9 @@ from connectnano import *
 import os
 os.system('cls')
 
-func = {97:char_A, 98:char_B}
-keyz = [97, 98]
+
+func = {97:char_A}
+keyz = [97]
 
 def keys(event):
     key = event.char
@@ -17,7 +18,7 @@ def keys(event):
 win = Tk()
 win.iconbitmap(r'D:\VS Code\P R O J E C T S\Arduino Stuff\Typing test Project\myicon.ico') #--r is to tell that its a path--#
 win.title('Typing Test Game')
-win.geometry('100x50+1100+100')
+win.geometry('100x50+1250+100')
 win.bind("<Key>", keys)
 
 win.mainloop()
