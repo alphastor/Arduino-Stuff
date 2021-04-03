@@ -1,0 +1,85 @@
+void letter_A(){
+  for(int i=1;i<7;i++){
+        if(i == 3 || i == 4){                 //column 2,3,6 & 7
+          continue;
+        }
+        else{
+          digitalWrite(columns[i],HIGH);
+          digitalWrite(rows[i],LOW);
+          digitalWrite(rows[3],LOW);
+          digitalWrite(rows[4],LOW);
+          digitalWrite(rows[7],LOW);
+        }
+      }
+      delay(5);
+
+      for(int i=0;i<8;i++){          //set all the row pins to high and col pins to low
+        digitalWrite(rows[i],HIGH);
+        digitalWrite(columns[i],LOW);
+      }
+      delay(5);
+
+      for(int i=0;i<2;i++){               //column 4 and 5
+        digitalWrite(columns[i+3],HIGH);
+        digitalWrite(rows[i],LOW);
+        digitalWrite(rows[i+3],LOW);
+      }
+      delay(5);
+
+      for(int i=0;i<8;i++){          //set all the row pins to high and col pins to low
+      digitalWrite(rows[i],HIGH);
+      digitalWrite(columns[i],LOW);
+    }
+      delay(5);
+}
+
+void letter_B(){
+  if(py_input == 'b'){              //column 2,3 & 6
+      for(int i=1;i<6;i++){
+        for(int j=0;j<8;j++){       //row 1 to 8
+          if(i==3 || i==4){
+            continue;
+        }
+        digitalWrite(columns[i],HIGH);
+        digitalWrite(rows[j],LOW);
+        }
+      }
+      delay(5);
+      for(int i=0;i<8;i++){          //set all the row pins to high and col pins to low
+        digitalWrite(rows[i],HIGH);
+        digitalWrite(columns[i],LOW);
+      }
+      delay(5);
+
+      for(int i=0;i<8;i++){   //column 4 and 5
+        if(i==2 || i==5 || i==1 || i==6 ){
+          continue;
+        }
+        digitalWrite(rows[i],LOW);
+        digitalWrite(columns[3],HIGH);
+        digitalWrite(columns[4],HIGH);
+      }
+      delay(5);
+
+      for(int i=0;i<8;i++){          //set all the row pins to high and col pins to low
+        digitalWrite(rows[i],HIGH);
+        digitalWrite(columns[i],LOW);
+      }
+      delay(5);
+
+      for(int i=1;i<7;i++){              //column 7
+        digitalWrite(columns[6],HIGH);
+        if(i==3 || i==4){
+          continue;
+        }
+        digitalWrite(rows[i],LOW);
+      }
+      delay(5);
+
+      for(int i=0;i<8;i++){          //set all the row pins to high and col pins to low
+        digitalWrite(rows[i],HIGH);
+        digitalWrite(columns[i],LOW);
+      }
+      delay(5);
+    }
+}
