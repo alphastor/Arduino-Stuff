@@ -1,8 +1,8 @@
-from connectnano import *
-from keyboard import *
+from connectnano import *  #another py file created naming it connectnano and imported here
+from keyboard import *     #module to recognise key presses and its value
 import os
 
-os.system('cls')
+os.system('cls')           #just to clear terminal on every run
 
 func = {97:A, 98:B, 99:C, 100:D,
         101:E, 102:F, 103:G, 104:H, 105:I, 106:J, 107:K, 108:L, 109:M, 110:N,
