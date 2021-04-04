@@ -2,7 +2,7 @@ from serial import *
 ser = Serial('COM6', baudrate=9600, timeout=1)
 
 def A():
-    ser.write(b'a')
+    ser.write(b'aa')
 
 def B():
     ser.write(b'b')
