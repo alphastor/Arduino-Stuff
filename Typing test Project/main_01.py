@@ -91,6 +91,8 @@ while True:
     if is_pressed('z'):
         func.get(ord('z'))()
 
+
+
 ###############################################################################
 # def keys(event):
 #     key = event.char
