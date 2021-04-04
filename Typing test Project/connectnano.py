@@ -7,20 +7,80 @@ ser = Serial('COM6', baudrate=9600, timeout=1)
 
 # def char_B():
 #     ser.write(b'b')
-def char_A():
+def A():
     ser.write(b'a')
 
-def char_B():
+def B():
     ser.write(b'b')
 
-def char_C():
+def C():
     ser.write(b'c')
 
-def char_D():
+def D():
     ser.write(b'd')
 
-def char_E():
+def E():
     ser.write(b'e')
 
-def char_F():
+def F():
     ser.write(b'f')
+
+def G():
+    ser.write(b'g')
+
+def H():
+    ser.write(b'h')
+
+def I():
+    ser.write(b'i')
+
+def J():
+    ser.write(b'j')
+
+def K():
+    ser.write(b'k')
+
+def L():
+    ser.write(b'l')
+
+def M():
+    ser.write(b'm')
+
+def N():
+    ser.write(b'n')
+
+def O():
+    ser.write(b'o')
+
+def P():
+    ser.write(b'p')
+
+def Q():
+    ser.write(b'q')
+
+def R():
+    ser.write(b'r')
+
+def S():
+    ser.write(b's')
+
+def T():
+    ser.write(b't')
+
+def U():
+    ser.write(b'u')
+
+def V():
+    ser.write(b'v')
+
+def W():
+    ser.write(b'w')
+
+def X():
+    ser.write(b'x')
+
+def Y():
+    ser.write(b'y')
+
+def Z():
+    ser.write(b'z')
