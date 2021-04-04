@@ -1,9 +1,7 @@
-# from tkinter import *
 from connectnano import *
 from keyboard import *
-from time import sleep
-
 import os
+
 os.system('cls')
 
 func = {97:A, 98:B, 99:C, 100:D,
@@ -91,9 +89,10 @@ while True:
     if is_pressed('z'):
         func.get(ord('z'))()
 
+###############################my second code##################################
+# from tkinter import *
+# from time import sleep
 
-
-###############################################################################
 # def keys(event):
 #     key = event.char
 #     func.get(ord(key))()
@@ -107,7 +106,7 @@ while True:
 
 # win.mainloop()
 
-###################################################################################
+###################################online copied code for tst######################################
 
 # from tkinter import *
 
