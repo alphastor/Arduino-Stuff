@@ -340,7 +340,7 @@ void Display(unsigned char dat[8][8])
 {
   for(int c = 0; c<8;c++)
   {
-    digitalWrite(Col[c],HIGH); //use thr column
+    digitalWrite(Col[c],HIGH); //set all columns to high
 
     for(int r = 0;r<8;r++)
     {
